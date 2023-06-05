@@ -12,7 +12,7 @@
         <ComboBox x:Name="cmbFontFamily" HorizontalAlignment="Left" Margin="214,31,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmbFontFamily_SelectionChanged"/>
         <ComboBox x:Name="cmbFontSize" HorizontalAlignment="Left" Margin="356,31,0,0" VerticalAlignment="Top" Width="44" SelectionChanged="cmbFontSize_SelectionChanged"/>
         <Button x:Name="btnBold" Content="B" HorizontalAlignment="Left" Margin="430,31,0,0" VerticalAlignment="Top" Height="21" Width="23" Click="btnBold_Click"/>
-        <Button x:Name="btnUnderline" Content="U" HorizontalAlignment="Left" Margin="486,31,0,0" VerticalAlignment="Top" Height="21" Width="23"/>
+        <Button x:Name="btnUnderline" Content="U" HorizontalAlignment="Left" Margin="486,31,0,0" VerticalAlignment="Top" Height="21" Width="23" Click="btnUnderline_Click"/>
         <Button x:Name="btnItalic" Content="I" HorizontalAlignment="Left" Margin="458,31,0,0" VerticalAlignment="Top" Height="21" Width="23" Click="btnItalic_Click"/>
         <RichTextBox x:Name="rtbText" Margin="39,91,26,30" Height="NaN" Width="NaN">
             <FlowDocument>

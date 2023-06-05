@@ -84,6 +84,17 @@ namespace TextEditor
             else
                 rtbText.Selection.ApplyPropertyValue(FontStyleProperty, FontStyles.Italic);
         }
+
+        private void btnUnderline_Click(object sender, RoutedEventArgs e)
+        {
+            object temp = rtbText.Selection.GetPropertyValue(Inline.TextDecorationsProperty);
+
+            if ((temp != DependencyProperty.UnsetValue) && (temp.Equals(TextDecorations.Underline)))
+                rtbText.Selection.ApplyPropertyValue(Inline.TextDecorationsProperty, null);
+            else
+                rtbText.Selection.ApplyPropertyValue(Inline.TextDecorationsProperty, TextDecorations.Underline);
+        }
+    }
     }
     
 }
