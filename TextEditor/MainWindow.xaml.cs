@@ -122,7 +122,10 @@ namespace TextEditor
             cmbFontSize.SelectedItem = temp;
         }
 
-
+        private void rtbText_LostFocus(object sender, RoutedEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
     
 }
