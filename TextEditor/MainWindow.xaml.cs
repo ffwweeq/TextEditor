@@ -94,7 +94,35 @@ namespace TextEditor
             else
                 rtbText.Selection.ApplyPropertyValue(Inline.TextDecorationsProperty, TextDecorations.Underline);
         }
-    }
+        SolidColorBrush DefaultColor = new SolidColorBrush(Color.FromArgb(100, 221, 221, 221));
+
+        private void rtbText_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+            object temp = rtbText.Selection.GetPropertyValue(Inline.FontWeightProperty);
+            if ((temp != DependencyProperty.UnsetValue) && (temp.Equals(FontWeights.Bold)))
+                btnBold.Background = Brushes.Gray;
+            else
+                btnBold.Background = DefaultColor;
+
+            temp = rtbText.Selection.GetPropertyValue(Inline.FontStyleProperty);
+            if ((temp != DependencyProperty.UnsetValue) && (temp.Equals(FontStyles.Italic)))
+                btnItalic.Background = Brushes.Gray;
+            else
+                btnItalic.Background = DefaultColor; 
+
+            temp = rtbText.Selection.GetPropertyValue(Inline.TextDecorationsProperty);
+            if ((temp != DependencyProperty.UnsetValue) && (temp.Equals(TextDecorations.Underline)))
+                btnUnderline.Background = Brushes.Gray;
+            else
+                btnUnderline.Background = DefaultColor;
+
+            temp = rtbText.Selection.GetPropertyValue(Inline.FontFamilyProperty);
+            cmbFontFamily.SelectedItem = temp; 
+            temp = rtbText.Selection.GetPropertyValue(Inline.FontSizeProperty);
+            cmbFontSize.SelectedItem = temp;
+        }
+
+
     }
     
 }
