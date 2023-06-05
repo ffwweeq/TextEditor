@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="btnOpen" Content="開啟檔案" HorizontalAlignment="Left" Margin="39,26,0,0" VerticalAlignment="Top" Height="31" Width="62"/>
-        <Button x:Name="btnSave" Content="存檔" HorizontalAlignment="Left" Margin="129,26,0,0" VerticalAlignment="Top" Height="31" Width="60"/>
-        <ComboBox x:Name="cmbFontFamily" HorizontalAlignment="Left" Margin="214,31,0,0" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="cmbFontSize" HorizontalAlignment="Left" Margin="356,31,0,0" VerticalAlignment="Top" Width="44"/>
+        <Button x:Name="btnOpen" Content="開啟檔案" HorizontalAlignment="Left" Margin="39,26,0,0" VerticalAlignment="Top" Height="31" Width="62" Click="btnOpen_Click"/>
+        <Button x:Name="btnSave" Content="存檔" HorizontalAlignment="Left" Margin="129,26,0,0" VerticalAlignment="Top" Height="31" Width="60" Click="btnSave_Click"/>
+        <ComboBox x:Name="cmbFontFamily" HorizontalAlignment="Left" Margin="214,31,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmbFontFamily_SelectionChanged"/>
+        <ComboBox x:Name="cmbFontSize" HorizontalAlignment="Left" Margin="356,31,0,0" VerticalAlignment="Top" Width="44" SelectionChanged="cmbFontSize_SelectionChanged"/>
         <Button x:Name="btnBold" Content="" HorizontalAlignment="Left" Margin="430,31,0,0" VerticalAlignment="Top" Height="21" Width="23"/>
         <Button x:Name="btnUnderline" Content="" HorizontalAlignment="Left" Margin="486,31,0,0" VerticalAlignment="Top" Height="21" Width="23"/>
         <Button x:Name="btnItalic" Content="" HorizontalAlignment="Left" Margin="458,31,0,0" VerticalAlignment="Top" Height="21" Width="23"/>

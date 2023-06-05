@@ -52,6 +52,18 @@ namespace TextEditor
                 range.Save(fileStream, DataFormats.Rtf);
             }
         }
+
+        private void cmbFontFamily_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (cmbFontFamily.SelectedItem != null)
+                rtbText.Selection.ApplyPropertyValue(Inline.FontFamilyProperty, cmbFontFamily.SelectedItem);
+        }
+
+        private void cmbFontSize_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (cmbFontSize.SelectedItem != null)
+                rtbText.Selection.ApplyPropertyValue(Inline.FontSizeProperty, cmbFontSize.SelectedItem);
+        }
     }
     
 }
