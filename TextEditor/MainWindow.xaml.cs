@@ -74,6 +74,16 @@ namespace TextEditor
             else
                 rtbText.Selection.ApplyPropertyValue(FontWeightProperty, FontWeights.Bold);
         }
+
+        private void btnItalic_Click(object sender, RoutedEventArgs e)
+        {
+            object temp = rtbText.Selection.GetPropertyValue(Inline.FontStyleProperty);
+
+            if ((temp != DependencyProperty.UnsetValue) && (temp.Equals(FontStyles.Italic)))
+                rtbText.Selection.ApplyPropertyValue(FontStyleProperty, FontStyles.Normal);
+            else
+                rtbText.Selection.ApplyPropertyValue(FontStyleProperty, FontStyles.Italic);
+        }
     }
     
 }
