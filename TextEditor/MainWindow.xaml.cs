@@ -64,6 +64,16 @@ namespace TextEditor
             if (cmbFontSize.SelectedItem != null)
                 rtbText.Selection.ApplyPropertyValue(Inline.FontSizeProperty, cmbFontSize.SelectedItem);
         }
+
+        private void btnBold_Click(object sender, RoutedEventArgs e)
+        {
+            object temp = rtbText.Selection.GetPropertyValue(Inline.FontWeightProperty);
+
+            if ((temp != DependencyProperty.UnsetValue) && (temp.Equals(FontWeights.Bold)))
+                rtbText.Selection.ApplyPropertyValue(FontWeightProperty, FontWeights.Normal);
+            else
+                rtbText.Selection.ApplyPropertyValue(FontWeightProperty, FontWeights.Bold);
+        }
     }
     
 }
